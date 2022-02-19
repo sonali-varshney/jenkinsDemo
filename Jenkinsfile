@@ -12,7 +12,7 @@ parameters {
     maven 'Maven'
     }
    stages {
-        stage('Test Stage') {
+        stage('Test2 Stage') {
             steps {
                 sh 'echo "The owner of this pipeline is ${firstname}"'
                 sh 'echo "The person who initiated this pipeline is ${name}"'
