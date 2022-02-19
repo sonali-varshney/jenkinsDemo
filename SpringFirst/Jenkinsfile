@@ -18,7 +18,7 @@ parameters {
                 sh 'echo "The person who initiated this pipeline is ${name}"'
                 sh 'echo "The task selected is ${task}"'
                 echo 'Hello this is test stage'
-                sh 'mvn test'
+                sh 'mvn -e test'
             }
         }
         stage('Build Stage') {
