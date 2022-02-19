@@ -9,7 +9,7 @@ parameters {
   string defaultValue: 'name', name: 'Initiator'
 }
     tools{
-    maven:Maven
+    maven 'Maven'
     }
    stages {
         stage('Test Stage') {
