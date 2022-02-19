@@ -8,6 +8,9 @@ parameters {
   choice choices: ['build', 'test', 'deploy-test', 'deploy-prod'], name: 'task'
   string defaultValue: 'name', name: 'Initiator'
 }
+    tools{
+    maven:Maven
+    }
    stages {
         stage('Test Stage') {
             steps {
@@ -15,6 +18,7 @@ parameters {
                 sh 'echo "The person who initiated this pipeline is ${name}"'
                 sh 'echo "The task selected is ${task}"'
                 echo 'Hello this is test stage'
+                sh 'mvn test'
             }
         }
         stage('Build Stage') {
