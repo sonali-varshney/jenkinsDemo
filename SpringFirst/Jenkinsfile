@@ -14,6 +14,7 @@ parameters {
    stages {
         stage('Test Stage') {
             steps {
+                sh 'ls'
                 sh 'echo "The owner of this pipeline is ${firstname}"'
                 sh 'echo "The person who initiated this pipeline is ${name}"'
                 sh 'echo "The task selected is ${task}"'
